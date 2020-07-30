@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="0" time="3.039">
+  <testsuite name="User" errors="0" failures="0" skipped="0" timestamp="2020-07-29T13:49:56" time="1.098" tests="1">
+    <testcase classname="User-getUserByAll" name="User-getUserByAll" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="Post Controller" errors="0" failures="0" skipped="0" timestamp="2020-07-29T13:49:56" time="2.72" tests="1">
+    <testcase classname="Post Controller-get /posts 200" name="Post Controller-get /posts 200" time="0.016">
+    </testcase>
+  </testsuite>
+</testsuites>

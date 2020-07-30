@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mysql:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile-MySQL
+    environment:
+      MYSQL_ROOT_PASSWORD: root #rootユーザ用のパスワード
+      MYSQL_USER: sample #作業ユーザ名
+      MYSQL_PASSWORD: sample123 #作業ユーザ用のパスワード
+      MYSQL_DATABASE: sample #作成するDB名
+      TZ: "Asia/Tokyo"
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306

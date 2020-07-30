@@ -1,0 +1,42 @@
+
+import {ConnectionOptions} from 'typeorm';
+
+const connectionOptions: ConnectionOptions[] = [
+  {
+    name: 'default',
+    type: 'mysql',
+    database: "sample",
+    synchronize: false,
+    logging: false,
+    entities: ['src/entity/*.js'],
+    subscribers: ['src/subscriber/*.js'],
+    migrations: ['src/migration/*.js'],
+    migrationsTableName: 'migrations',
+    cli: {
+      entitiesDir: 'src/entity',
+      subscribersDir: 'src/subscriber',
+      migrationsDir: 'databases/migration',
+    },
+    host: "localhost",
+    port: 3306,
+    username: "sample",
+    password: "sample123",
+  },
+  {
+    name: 'test',
+    type: 'mysql',
+    database: "sample",
+    synchronize: true,
+    dropSchema: true,
+    logging: false,
+    entities: ['src/entity/*.ts'],
+    subscribers: ['src/subscriber/*.ts'],
+    migrations: ['src/migration/*.ts'],
+    host: "localhost",
+    port: 3306,
+    username: "sample",
+    password: "sample123",
+  },
+];
+
+export = connectionOptions;
